@@ -1,0 +1,1 @@
+docker run -ti  --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" ns2
