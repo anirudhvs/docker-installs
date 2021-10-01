@@ -2,11 +2,8 @@ FROM ubuntu:18.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update -y
-
-RUN apt-get install -y build-essential autoconf automake libxmu-dev libgtk2.0-0 curl wget gcc-4.8 g++-4.8 tclsh
-
-RUN apt install -y ns2 nam
+RUN apt-get update -y && \ 
+    apt-get install -y libgtk2.0-0 curl wget tclsh ns2 nam
 
 RUN wget https://www.xgraph.org/linux/xgraph_4.38_linux64.tar.gz
 
